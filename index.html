@@ -12,9 +12,11 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       background-color: #f0f0f0;
       overflow-x: hidden;
+      color: #fff;
+      line-height: 1.6;
     }
 
     html {
@@ -23,21 +25,49 @@
 
     section {
       width: 100%;
-      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: white;
       text-align: center;
-      padding: 20px;
+      padding: 50px 20px;
+      margin-bottom: 40px;
     }
 
+    h1, h2 {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    /* Hero Section */
     .hero {
       background-color: #282c34;
-      display: flex;
+      background-image: linear-gradient(45deg, rgba(40, 44, 52, 0.8), rgba(40, 44, 52, 0.6));
+      background-size: cover;
+      color: white;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+      padding: 80px 20px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Add dynamic circles to the background */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0));
+      animation: movingCircles 15s infinite linear;
+      pointer-events: none;
+    }
+
+    @keyframes movingCircles {
+      0% { transform: translate(-25%, -25%); }
+      50% { transform: translate(25%, 25%); }
+      100% { transform: translate(-25%, -25%); }
     }
 
     .hero h1 {
@@ -48,6 +78,7 @@
     .hero p {
       font-size: 1.5rem;
       margin-bottom: 30px;
+      max-width: 800px;
     }
 
     .image-slider {
@@ -62,16 +93,7 @@
       margin: 0 15px;
       border-radius: 50%;
       animation: slide 6s infinite;
-    }
-
-    .image-slider img:nth-child(1) {
-      animation-delay: 0s;
-    }
-    .image-slider img:nth-child(2) {
-      animation-delay: 2s;
-    }
-    .image-slider img:nth-child(3) {
-      animation-delay: 4s;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
     }
 
     @keyframes slide {
@@ -82,40 +104,75 @@
       100% { transform: translateX(0); }
     }
 
-    .journey {
+    /* Journey, Skills, Projects, and Testimonials Section */
+    .journey, .skills, .projects, .testimonials {
       background-color: #3b3f45;
+      border-radius: 10px;
+      padding: 40px;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
     }
 
-    .journey h2 {
-      font-size: 3rem;
+    .journey:hover, .skills:hover, .projects:hover, .testimonials:hover {
+      transform: scale(1.05);
+      background-color: #444a53;
+    }
+
+    .journey h2, .skills h2, .projects h2, .testimonials h2 {
+      font-size: 2.5rem;
       margin-bottom: 20px;
+      font-weight: bold;
     }
 
-    .journey p {
-      font-size: 1.3rem;
+    .journey p, .skills p, .projects p, .testimonials p {
+      font-size: 1.2rem;
+      line-height: 1.8;
       max-width: 900px;
+      margin: 0 auto;
     }
 
-    .social-media {
+    .skills ul, .projects ul, .testimonials ul {
+      list-style-type: none;
       margin-top: 20px;
+      padding-left: 0;
     }
 
+    .skills li, .projects li, .testimonials li {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+
+    .skills li:before, .projects li:before, .testimonials li:before {
+      content: '•';
+      margin-right: 10px;
+      color: #4CAF50;
+    }
+
+    /* Social Media Links */
     .social-media a {
       color: white;
       text-decoration: none;
       margin: 0 15px;
       font-size: 2rem;
+      transition: color 0.3s ease, transform 0.3s ease;
     }
 
+    .social-media a:hover {
+      color: #4CAF50;
+      transform: translateY(-5px);
+    }
+
+    /* Thoughts Section */
     .thoughts {
       background-color: #333;
+      font-style: italic;
     }
 
     .thoughts p {
-      font-style: italic;
       font-size: 1.5rem;
     }
 
+    /* Footer */
     .footer {
       background-color: #282c34;
       color: white;
@@ -132,7 +189,7 @@
 
   <section class="hero">
     <h1>Gaurav Kushwaha</h1>
-    <p>Welcome to my personal website! Here’s a glimpse of my journey and thoughts.</p>
+    <p>Welcome to my personal website! Here’s a glimpse of my journey, skills, projects, and thoughts.</p>
 
     <div class="image-slider">
       <img src="image1.jpg" alt="Image 1">
@@ -144,7 +201,47 @@
   <section class="journey">
     <div>
       <h2>My Journey</h2>
-      <p>I am Gaurav Kushwaha, and my journey started in school, which led me to pursue an engineering degree at XYZ Engineering College. My interests in technology have driven me to explore different aspects of the tech world, and I continuously strive to learn, grow, and contribute meaningfully to the field. Every step, from school to engineering college, has shaped who I am today and motivates me to keep pushing forward.</p>
+      <p>I am Gaurav Kushwaha, an aspiring tech enthusiast. I started my journey in school, and it led me to pursue an engineering degree at XYZ Engineering College. Over the years, I have honed my skills in technology and continuously strive to learn, grow, and contribute to the field. Here’s a brief look into the milestones that have shaped me.</p>
+    </div>
+  </section>
+
+  <section class="skills">
+    <div>
+      <h2>Skills</h2>
+      <p>Here are some of the skills that I have developed throughout my journey:</p>
+      <ul>
+        <li>Web Development (HTML, CSS, JavaScript, React)</li>
+        <li>Data Structures and Algorithms</li>
+        <li>Python and Java Programming</li>
+        <li>Machine Learning Basics</li>
+        <li>Cloud Computing (AWS, Azure)</li>
+        <li>Version Control (Git and GitHub)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="projects">
+    <div>
+      <h2>Projects</h2>
+      <p>Here are a few projects that I’ve worked on:</p>
+      <ul>
+        <li><strong>Portfolio Website</strong> - A personal website to showcase my work and achievements.</li>
+        <li><strong>Weather App</strong> - A web app to display weather information using an API.</li>
+        <li><strong>Task Manager</strong> - A full-stack web application to manage and track tasks.</li>
+        <li><strong>Machine Learning Model</strong> - A simple model to predict house prices using Python and scikit-learn.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div>
+      <h2>What Others Say</h2>
+      <p>Some feedback and testimonials from colleagues and mentors:</p>
+      <ul>
+        <li><strong>John Doe:</strong> "Gaurav is an amazing developer with a keen interest in learning new technologies."</li>
+        <li><strong>Jane Smith:</strong> "A great team player who always strives for excellence in everything he does."</li>
+        <li><strong>Mark Wilson:</strong> "Gaurav is dedicated, skilled, and always delivers high-quality work."</li>
+      </ul>
     </div>
   </section>
 
