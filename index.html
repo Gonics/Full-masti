@@ -65,6 +65,19 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .skill {
+            margin: 10px;
+            padding: 10px 20px;
+            background: #555;
+            color: white;
+            border-radius: 5px;
+            font-size: 1em;
+        }
         .social-links {
             text-align: center;
             margin-top: 20px;
@@ -96,60 +109,64 @@
             margin-top: 20px;
             position: relative;
         }
-        .timeline-line {
+        .timeline {
             position: relative;
-            width: 4px;
-            height: 300px;
-            background: #ccc;
+            width: 400px;
+            height: 400px;
             margin: 0 auto;
         }
+        .timeline-path {
+            width: 100%;
+            height: 100%;
+            border: 3px dotted #ccc;
+            border-radius: 50%;
+            position: absolute;
+        }
         .timeline-point {
-            width: 10px;
-            height: 10px;
+            width: 15px;
+            height: 15px;
             background: #555;
             border-radius: 50%;
             position: absolute;
-            left: -3px;
         }
-        .point-1 { top: 0; }
-        .point-2 { top: 25%; }
-        .point-3 { top: 50%; }
-        .point-4 { top: 75%; }
-        .point-college { top: 95%; background: #000; }
+        .point-1 { top: 5%; left: 50%; }
+        .point-2 { top: 25%; left: 75%; }
+        .point-3 { top: 50%; left: 50%; }
+        .point-4 { top: 75%; left: 25%; }
+        .point-college { top: 95%; left: 50%; background: #000; }
         .pointer {
-            width: 15px;
-            height: 15px;
+            width: 20px;
+            height: 20px;
             background: #ff5555;
             border-radius: 50%;
             position: absolute;
-            left: -6px;
-            animation: movePointer 5s forwards;
+            animation: movePointer 10s forwards;
         }
         @keyframes movePointer {
-            0% { top: 0; }
-            25% { top: 25%; }
-            50% { top: 50%; }
-            75% { top: 75%; }
-            100% { top: 95%; }
+            0% { top: 5%; left: 50%; }
+            25% { top: 25%; left: 75%; }
+            50% { top: 50%; left: 50%; }
+            75% { top: 75%; left: 25%; }
+            100% { top: 95%; left: 50%; }
         }
-        footer {
+        .friends {
             text-align: center;
-            padding: 10px;
-            background: #333;
-            color: white;
-            margin-top: 20px;
+            margin: 40px 0;
         }
-        .thought {
-            text-align: center;
-            margin-top: 40px;
-            font-style: italic;
-            font-size: 1.2em;
-            color: #555;
+        .friend {
+            display: inline-block;
+            margin: 10px;
+        }
+        .friend img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid #555;
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section with Slider -->
+    <!-- Hero Section -->
     <div class="hero">
         <div class="slider">
             <img src="https://via.placeholder.com/1920x1080?text=Photo+1" alt="Photo 1">
@@ -164,7 +181,8 @@
 
     <nav>
         <a href="#about">About Me</a>
-        <a href="#journey">My Journey</a>
+        <a href="#skills">Skills</a>
+        <a href="#journey">Journey</a>
         <a href="#contact">Contact</a>
     </nav>
 
@@ -173,15 +191,27 @@
         <p>Hi, I'm Gaurav Kushwaha. I completed my 12th class with mathematics and am currently pursuing an engineering degree in Electronics. I'm passionate about technology and love exploring system software and tech innovations.</p>
     </section>
 
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill">C++</div>
+            <div class="skill">Java</div>
+            <div class="skill">HTML & CSS</div>
+            <div class="skill">Electronics</div>
+            <div class="skill">System Software</div>
+        </div>
+    </section>
+
     <section id="journey">
         <h2>My Journey</h2>
-        <p>Explore my journey from school to where I am now:</p>
         <div class="button" onclick="showTimeline()">View Journey Map</div>
         <div id="timeline">
-            <div class="timeline-line">
+            <div class="timeline">
+                <div class="timeline-path"></div>
                 <div class="timeline-point point-1">1</div>
                 <div class="timeline-point point-2">2</div>
                 <div class="timeline-point point-3">12</div>
+                <div class="timeline-point point-4">College</div>
                 <div class="timeline-point point-college">College</div>
                 <div class="pointer"></div>
             </div>
@@ -197,16 +227,15 @@
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Gaurav Kushwaha. All Rights Reserved.</p>
-    </footer>
-
-    <!-- Motivational Thought -->
-    <div class="thought">
-        <p>"Success is not final, failure is not fatal: It is the courage to continue that counts."</p>
-        <p>— Gaurav Kushwaha</p>
-        <p>Thank you for visiting!</p>
-    </div>
+    <!-- Friends Section -->
+    <section class="friends">
+        <h2>My Best Friends</h2>
+        <div class="friend"><img src="https://via.placeholder.com/80?text=Friend+1" alt="Friend 1"></div>
+        <div class="friend"><img src="https://via.placeholder.com/80?text=Friend+2" alt="Friend 2"></div>
+        <div class="friend"><img src="https://via.placeholder.com/80?text=Friend+3" alt="Friend 3"></div>
+        <div class="friend"><img src="https://via.placeholder.com/80?text=Friend+4" alt="Friend 4"></div>
+        <div class="friend"><img src="https://via.placeholder.com/80?text=Friend+5" alt="Friend 5"></div>
+    </section>
 
     <script>
         function showTimeline() {
