@@ -4,7 +4,129 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gaurav Kushwaha - Bio</title>
-  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      overflow-x: hidden;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    section {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero {
+      background-color: #282c34;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+
+    .image-slider {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .image-slider img {
+      width: 200px;
+      height: 200px;
+      margin: 0 15px;
+      border-radius: 50%;
+      animation: slide 6s infinite;
+    }
+
+    .image-slider img:nth-child(1) {
+      animation-delay: 0s;
+    }
+    .image-slider img:nth-child(2) {
+      animation-delay: 2s;
+    }
+    .image-slider img:nth-child(3) {
+      animation-delay: 4s;
+    }
+
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(20px); }
+      50% { transform: translateX(0); }
+      75% { transform: translateX(-20px); }
+      100% { transform: translateX(0); }
+    }
+
+    .journey {
+      background-color: #3b3f45;
+    }
+
+    .journey h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .journey p {
+      font-size: 1.3rem;
+      max-width: 900px;
+    }
+
+    .social-media {
+      margin-top: 20px;
+    }
+
+    .social-media a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 2rem;
+    }
+
+    .thoughts {
+      background-color: #333;
+    }
+
+    .thoughts p {
+      font-style: italic;
+      font-size: 1.5rem;
+    }
+
+    .footer {
+      background-color: #282c34;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 1.2rem;
+    }
+  </style>
 </head>
 <body>
 
