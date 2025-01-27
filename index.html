@@ -78,30 +78,15 @@
             border-radius: 5px;
             font-size: 1em;
         }
-        .social-links {
+        .section-image {
+            margin: 10px 0;
             text-align: center;
-            margin-top: 20px;
         }
-        .social-links a {
+        .section-image a {
             text-decoration: none;
-            color: white;
-            background: #555;
-            padding: 10px 20px;
-            border-radius: 5px;
-            margin: 5px;
-            display: inline-block;
-        }
-        .button {
-            display: block;
-            width: 200px;
-            margin: 20px auto;
-            text-align: center;
-            padding: 10px 20px;
-            background-color: #555;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            cursor: pointer;
+            color: #555;
+            font-size: 0.9em;
+            font-weight: bold;
         }
         #timeline {
             display: none;
@@ -129,11 +114,26 @@
             border-radius: 50%;
             position: absolute;
         }
-        .point-1 { top: 5%; left: 50%; }
-        .point-2 { top: 25%; left: 75%; }
-        .point-3 { top: 50%; left: 50%; }
-        .point-4 { top: 75%; left: 25%; }
-        .point-college { top: 95%; left: 50%; background: #000; }
+        .timeline-symbol {
+            position: absolute;
+            font-size: 1.5em;
+        }
+        .symbol-1 {
+            top: 2%; left: 47%;
+            content: '📖'; /* Book symbol */
+        }
+        .symbol-college {
+            top: 90%; left: 47%;
+            content: '🎓'; /* Graduation cap */
+        }
+        .arrow {
+            position: absolute;
+            font-size: 1.2em;
+        }
+        .arrow-1 { top: 10%; left: 50%; content: '⬇'; }
+        .arrow-2 { top: 30%; left: 70%; content: '➡'; }
+        .arrow-3 { top: 60%; left: 30%; content: '⬅'; }
+        .arrow-4 { top: 80%; left: 50%; content: '⬇'; }
         .pointer {
             width: 20px;
             height: 20px;
@@ -189,6 +189,9 @@
     <section id="about">
         <h2>About Me</h2>
         <p>Hi, I'm Gaurav Kushwaha. I completed my 12th class with mathematics and am currently pursuing an engineering degree in Electronics. I'm passionate about technology and love exploring system software and tech innovations.</p>
+        <div class="section-image">
+            <a href="https://via.placeholder.com/800x600?text=About+Image" target="_blank">View Image</a>
+        </div>
     </section>
 
     <section id="skills">
@@ -200,6 +203,9 @@
             <div class="skill">Electronics</div>
             <div class="skill">System Software</div>
         </div>
+        <div class="section-image">
+            <a href="https://via.placeholder.com/800x600?text=Skills+Image" target="_blank">View Image</a>
+        </div>
     </section>
 
     <section id="journey">
@@ -208,11 +214,16 @@
         <div id="timeline">
             <div class="timeline">
                 <div class="timeline-path"></div>
+                <div class="timeline-symbol symbol-1">📖</div>
+                <div class="timeline-symbol symbol-college">🎓</div>
                 <div class="timeline-point point-1">1</div>
                 <div class="timeline-point point-2">2</div>
                 <div class="timeline-point point-3">12</div>
-                <div class="timeline-point point-4">College</div>
                 <div class="timeline-point point-college">College</div>
+                <div class="arrow arrow-1">⬇</div>
+                <div class="arrow arrow-2">➡</div>
+                <div class="arrow arrow-3">⬅</div>
+                <div class="arrow arrow-4">⬇</div>
                 <div class="pointer"></div>
             </div>
         </div>
@@ -221,9 +232,9 @@
     <section id="contact">
         <h2>Contact & Social Media</h2>
         <div class="social-links">
-            <a href="https://twitter.com/your_twitter_id" target="_blank">Twitter</a>
-            <a href="https://instagram.com/your_instagram_id" target="_blank">Instagram</a>
-            <a href="https://linkedin.com/in/your_linkedin_id" target="_blank">LinkedIn</a>
+            <a href="https://x.com/X_Account474?t=4nosX8tODYARD4VgH2Dreg&s=09" target="_blank">Twitter</a>
+            <a href="https://www.instagram.com/gaurav.kushwaha._?igsh=dzFmMHQ5emZldzk2" target="_blank">Instagram</a>
+            <a href="https://www.linkedin.com/in/gaurav-kushwaha-327074240?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
         </div>
     </section>
 
