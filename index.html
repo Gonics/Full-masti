@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gaurav Kushwaha - Portfolio</title>
     <style>
+        /* Global Styling */
         body {
             margin: 0;
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom, #f5f5f5, #e8e8e8);
+            font-family: 'Poppins', sans-serif;
             color: #333;
+            background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
             scroll-behavior: smooth;
-            overflow-x: hidden;
         }
+
         /* Hero Section */
         .hero {
             position: relative;
@@ -20,150 +21,216 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            color: #fff;
             text-align: center;
-            color: white;
             overflow: hidden;
-            background: rgba(0, 0, 0, 0.6);
         }
+
         .hero h1 {
-            font-size: 3.5rem;
-            animation: fadeIn 2s ease-in-out;
+            font-size: 4rem;
+            font-weight: bold;
+            animation: fadeIn 1.5s ease-in-out;
+            margin: 0;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
         }
+
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            font-weight: 300;
             margin-top: 10px;
-            animation: fadeIn 3s ease-in-out;
+            animation: fadeIn 2.5s ease-in-out;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
         }
+
         .hero-slider {
             position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
             height: 100%;
+            top: 0;
+            left: 0;
             z-index: -1;
-            overflow: hidden;
         }
+
         .hero-slider img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.8;
-            animation: slide 20s infinite linear;
+            opacity: 0.5;
+            animation: slide 15s infinite linear;
         }
+
         @keyframes slide {
             0% { transform: translateX(0); }
-            25% { transform: translateX(-100%); }
-            50% { transform: translateX(-200%); }
-            75% { transform: translateX(-300%); }
+            33% { transform: translateX(-100%); }
+            66% { transform: translateX(-200%); }
             100% { transform: translateX(0); }
         }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
+
+        /* Navbar */
         nav {
-            display: flex;
-            justify-content: center;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 15px 0;
             position: sticky;
             top: 0;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
             z-index: 1000;
         }
+
         nav a {
+            color: #fff;
             text-decoration: none;
-            margin: 0 15px;
-            color: white;
+            margin: 0 20px;
             font-weight: bold;
-            transition: color 0.3s ease-in-out;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
         }
+
         nav a:hover {
-            color: #ffb400;
+            color: #ffc107;
         }
+
+        /* Section Styling */
         section {
-            padding: 50px 20px;
+            padding: 60px 20px;
             margin: 20px;
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 10px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
         }
+
         section h2 {
             text-align: center;
-            font-size: 2rem;
-            color: #4b79a1;
+            font-size: 2.5rem;
+            color: #495057;
+            margin-bottom: 30px;
             position: relative;
         }
+
         section h2::after {
             content: '';
-            width: 50px;
-            height: 3px;
-            background: #ffb400;
+            width: 80px;
+            height: 4px;
+            background: #ffc107;
             position: absolute;
             bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
         }
+
+        /* Skills Section */
         .skills {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            gap: 20px;
         }
+
         .skill {
-            background: #4b79a1;
-            color: white;
-            margin: 10px;
-            padding: 15px 20px;
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            animation: zoomIn 1.5s ease-in-out;
+            background: linear-gradient(135deg, #4e73df, #1cc88a);
+            color: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        .skill:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Timeline Section */
         .timeline-container {
-            position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
-        }
-        .timeline-path {
-            width: 3px;
-            height: 100%;
-            background: #ccc;
-            position: absolute;
-        }
-        .timeline-point {
-            background: #4b79a1;
-            color: white;
-            width: 30px;
-            height: 30px;
-            text-align: center;
-            line-height: 30px;
-            border-radius: 50%;
-            margin: 20px 0;
             position: relative;
-            animation: fadeInUp 2s ease-in-out;
         }
+
+        .timeline-path {
+            width: 4px;
+            background: #6c757d;
+            height: 100%;
+            position: absolute;
+            top: 0;
+        }
+
+        .timeline-point {
+            background: #ffc107;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            position: relative;
+            margin: 20px 0;
+            animation: bounce 2s infinite;
+        }
+
         .timeline-point span {
             font-size: 0.8rem;
             position: absolute;
-            top: -25px;
+            top: -30px;
             left: 50%;
             transform: translateX(-50%);
-            white-space: nowrap;
+            color: #495057;
+            font-weight: bold;
         }
-        .timeline-point img {
-            width: 20px;
-            height: 20px;
-            position: absolute;
-            top: -50px;
-            left: 50%;
-            transform: translateX(-50%);
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
+
+        /* Friends Section */
+        .friend-images {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .friend-images img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .friend-images img:hover {
+            transform: scale(1.2);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
         footer {
-            background: #4b79a1;
+            background: #343a40;
             padding: 20px 0;
             text-align: center;
-            color: white;
-            margin-top: 20px;
+            color: #fff;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        footer p:last-child {
+            margin-top: 5px;
+            font-size: 0.9rem;
+            color: #ffc107;
         }
     </style>
 </head>
@@ -172,19 +239,19 @@
 <!-- Hero Section -->
 <div class="hero">
     <div class="hero-slider">
-        <img src="https://via.placeholder.com/1920x1080?text=Image+1" alt="Image 1">
-        <img src="https://via.placeholder.com/1920x1080?text=Image+2" alt="Image 2">
-        <img src="https://via.placeholder.com/1920x1080?text=Image+3" alt="Image 3">
+        <img src="https://via.placeholder.com/1920x1080?text=Slide+1" alt="Slide 1">
+        <img src="https://via.placeholder.com/1920x1080?text=Slide+2" alt="Slide 2">
+        <img src="https://via.placeholder.com/1920x1080?text=Slide+3" alt="Slide 3">
     </div>
-    <div class="hero-text">
+    <div>
         <h1>Gaurav Kushwaha</h1>
-        <p>Electronics Engineering Student | Tech Enthusiast | Passionate about Systems Software</p>
+        <p>Electronics Engineering Student | Tech Enthusiast | Systems Software</p>
     </div>
 </div>
 
-<!-- Navigation -->
+<!-- Navbar -->
 <nav>
-    <a href="#about">About Me</a>
+    <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#journey">Journey</a>
     <a href="#friends">Friends</a>
@@ -193,7 +260,7 @@
 <!-- About Section -->
 <section id="about">
     <h2>About Me</h2>
-    <p>Hello! I am Gaurav Kushwaha, currently pursuing a degree in Electronics Engineering. I have a passion for technology, systems software, and coding.</p>
+    <p>Hello! I am Gaurav Kushwaha, an aspiring Electronics Engineer. I love building and exploring technology, especially in systems software and coding!</p>
 </section>
 
 <!-- Skills Section -->
@@ -213,16 +280,26 @@
     <h2>My Journey</h2>
     <div class="timeline-container">
         <div class="timeline-path"></div>
-        <div class="timeline-point"><span>1st Class</span><img src="https://via.placeholder.com/20" alt="Book"></div>
-        <div class="timeline-point"><span>12th Class</span></div>
-        <div class="timeline-point"><span>College</span><img src="https://via.placeholder.com/20" alt="Graduation"></div>
+        <div class="timeline-point"><span>1st Class</span>1</div>
+        <div class="timeline-point"><span>12th Class</span>12</div>
+        <div class="timeline-point"><span>College</span>🎓</div>
+    </div>
+</section>
+
+<!-- Friends Section -->
+<section id="friends">
+    <h2>Friends</h2>
+    <div class="friend-images">
+        <img src="https://via.placeholder.com/80?text=Friend+1" alt="Friend 1">
+        <img src="https://via.placeholder.com/80?text=Friend+2" alt="Friend 2">
+        <img src="https://via.placeholder.com/80?text=Friend+3" alt="Friend 3">
     </div>
 </section>
 
 <!-- Footer -->
 <footer>
-    <p>“Keep pushing forward and never stop learning.” - Gaurav Kushwaha</p>
-    <p>Thank you for visiting!</p>
+    <p>"Dream big, work hard, and never stop learning."</p>
+    <p>- Gaurav Kushwaha</p>
 </footer>
 
 </body>
