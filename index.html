@@ -11,17 +11,19 @@
             background: linear-gradient(to bottom, #f5f5f5, #e8e8e8);
             color: #333;
             scroll-behavior: smooth;
+            overflow-x: hidden;
         }
+        /* Hero Section */
         .hero {
             position: relative;
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(to right, #4b79a1, #283e51);
-            color: white;
             text-align: center;
+            color: white;
             overflow: hidden;
+            background: rgba(0, 0, 0, 0.6);
         }
         .hero h1 {
             font-size: 3.5rem;
@@ -34,6 +36,8 @@
         }
         .hero-slider {
             position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             z-index: -1;
@@ -43,12 +47,14 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            animation: slide 15s infinite;
+            opacity: 0.8;
+            animation: slide 20s infinite linear;
         }
         @keyframes slide {
             0% { transform: translateX(0); }
-            33% { transform: translateX(-100%); }
-            66% { transform: translateX(-200%); }
+            25% { transform: translateX(-100%); }
+            50% { transform: translateX(-200%); }
+            75% { transform: translateX(-300%); }
             100% { transform: translateX(0); }
         }
         @keyframes fadeIn {
@@ -58,7 +64,7 @@
         nav {
             display: flex;
             justify-content: center;
-            background: #4b79a1;
+            background: rgba(0, 0, 0, 0.8);
             padding: 15px 0;
             position: sticky;
             top: 0;
@@ -77,11 +83,10 @@
         section {
             padding: 50px 20px;
             margin: 20px;
-            background: white;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
-            position: relative;
-            overflow: hidden;
         }
         section h2 {
             text-align: center;
@@ -113,16 +118,11 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             animation: zoomIn 1.5s ease-in-out;
         }
-        @keyframes zoomIn {
-            from { transform: scale(0); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
         .timeline-container {
             position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
-            overflow: hidden;
         }
         .timeline-path {
             width: 3px;
@@ -142,10 +142,6 @@
             position: relative;
             animation: fadeInUp 2s ease-in-out;
         }
-        @keyframes fadeInUp {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
         .timeline-point span {
             font-size: 0.8rem;
             position: absolute;
@@ -161,22 +157,6 @@
             top: -50px;
             left: 50%;
             transform: translateX(-50%);
-        }
-        .friend-images {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .friend-images img {
-            margin: 10px;
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            transition: transform 0.3s ease-in-out;
-        }
-        .friend-images img:hover {
-            transform: scale(1.1);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         footer {
             background: #4b79a1;
@@ -236,18 +216,6 @@
         <div class="timeline-point"><span>1st Class</span><img src="https://via.placeholder.com/20" alt="Book"></div>
         <div class="timeline-point"><span>12th Class</span></div>
         <div class="timeline-point"><span>College</span><img src="https://via.placeholder.com/20" alt="Graduation"></div>
-    </div>
-</section>
-
-<!-- Friends Section -->
-<section id="friends">
-    <h2>Best Friends</h2>
-    <div class="friend-images">
-        <img src="https://via.placeholder.com/80?text=Friend+1" alt="Friend 1">
-        <img src="https://via.placeholder.com/80?text=Friend+2" alt="Friend 2">
-        <img src="https://via.placeholder.com/80?text=Friend+3" alt="Friend 3">
-        <img src="https://via.placeholder.com/80?text=Friend+4" alt="Friend 4">
-        <img src="https://via.placeholder.com/80?text=Friend+5" alt="Friend 5">
     </div>
 </section>
 
