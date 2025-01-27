@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gaurav Kushwaha - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         /* Global Styling */
         body {
@@ -24,6 +25,7 @@
             color: #fff;
             text-align: center;
             overflow: hidden;
+            background: rgba(0, 0, 0, 0.3); /* Transparent Background */
         }
 
         .hero h1 {
@@ -92,7 +94,7 @@
         }
 
         nav a:hover {
-            color: #000;
+            color: #ffc107;
         }
 
         /* Section Styling */
@@ -116,7 +118,7 @@
             content: '';
             width: 80px;
             height: 4px;
-            background: #000;  /* Changed to black */
+            background: #ffc107;
             position: absolute;
             bottom: -10px;
             left: 50%;
@@ -158,14 +160,14 @@
 
         .timeline-path {
             width: 4px;
-            background: rgba(108, 117, 125, 0.5); /* Light transparent grey */
+            background: #6c757d;
             height: 100%;
             position: absolute;
             top: 0;
         }
 
         .timeline-point {
-            background: #000; /* Changed to black */
+            background: #ffc107;
             color: #fff;
             width: 40px;
             height: 40px;
@@ -214,31 +216,6 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
 
-        /* Social Media Section */
-        .social-media {
-            text-align: center;
-            padding: 40px 20px;
-            background: #343a40;
-        }
-
-        .social-media h2 {
-            color: #fff;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .social-media a {
-            margin: 0 15px;
-            color: #fff;
-            font-size: 2rem;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .social-media a:hover {
-            color: #007bff;
-        }
-
         /* Footer */
         footer {
             background: #343a40;
@@ -255,8 +232,60 @@
         footer p:last-child {
             margin-top: 5px;
             font-size: 0.9rem;
-            color: #007bff;
+            color: #ffc107;
         }
+
+        /* Contact Section */
+        .contact {
+            background: #fff;
+            padding: 40px 20px;
+            margin: 20px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .contact h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #495057;
+            margin-bottom: 30px;
+        }
+
+        .contact a {
+            display: block;
+            text-align: center;
+            background: #ffc107;
+            color: #fff;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            margin: 10px 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact a:hover {
+            background-color: #e0a800;
+        }
+
+        /* Social Media Links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            color: #333;
+            font-size: 2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ffc107;
+        }
+
     </style>
 </head>
 <body>
@@ -264,9 +293,9 @@
 <!-- Hero Section -->
 <div class="hero">
     <div class="hero-slider">
-        <img src="YOUR_HERO_IMAGE_1_URL" alt="Slide 1">
-        <img src="YOUR_HERO_IMAGE_2_URL" alt="Slide 2">
-        <img src="YOUR_HERO_IMAGE_3_URL" alt="Slide 3">
+        <img src="https://via.placeholder.com/1920x1080?text=Slide+1" alt="Slide 1">
+        <img src="https://via.placeholder.com/1920x1080?text=Slide+2" alt="Slide 2">
+        <img src="https://via.placeholder.com/1920x1080?text=Slide+3" alt="Slide 3">
     </div>
     <div>
         <h1>Gaurav Kushwaha</h1>
@@ -280,12 +309,12 @@
     <a href="#skills">Skills</a>
     <a href="#journey">Journey</a>
     <a href="#friends">Friends</a>
+    <a href="#contact">Contact</a>
 </nav>
 
 <!-- About Section -->
 <section id="about">
     <h2>About Me</h2>
-    <img src="YOUR_ABOUT_IMAGE_URL" alt="About Me" style="width:100%; border-radius: 10px; margin-bottom: 20px;">
     <p>Hello! I am Gaurav Kushwaha, an aspiring Electronics Engineer. I love building and exploring technology, especially in systems software and coding!</p>
 </section>
 
@@ -304,7 +333,6 @@
 <!-- Journey Section -->
 <section id="journey">
     <h2>My Journey</h2>
-    <img src="YOUR_JOURNEY_IMAGE_URL" alt="Journey Map" style="width:100%; border-radius: 10px; margin-bottom: 20px;">
     <div class="timeline-container">
         <div class="timeline-path"></div>
         <div class="timeline-point"><span>1st Class</span>1</div>
@@ -317,31 +345,29 @@
 <section id="friends">
     <h2>Friends</h2>
     <div class="friend-images">
-        <img src="YOUR_FRIEND_1_IMAGE_URL" alt="Friend 1">
-        <img src="YOUR_FRIEND_2_IMAGE_URL" alt="Friend 2">
-        <img src="YOUR_FRIEND_3_IMAGE_URL" alt="Friend 3">
+        <img src="https://via.placeholder.com/80" alt="Friend 1">
+        <img src="https://via.placeholder.com/80" alt="Friend 2">
+        <img src="https://via.placeholder.com/80" alt="Friend 3">
+        <img src="https://via.placeholder.com/80" alt="Friend 4">
     </div>
 </section>
 
-<!-- Social Media Section -->
-<section class="social-media">
-    <h2>Connect with Me</h2>
-    <a href="https://www.linkedin.com/in/gaurav-kushwaha" target="_blank">
-        <img src="linkedin-logo.png" alt="LinkedIn" style="width: 40px;">
-    </a>
-    <a href="https://github.com/gaurav-kushwaha" target="_blank">
-        <img src="github-logo.png" alt="GitHub" style="width: 40px;">
-    </a>
-    <a href="https://twitter.com/gaurav_kushwaha" target="_blank">
-        <img src="twitter-logo.png" alt="Twitter" style="width: 40px;">
-    </a>
-    <!-- Add more social media links here -->
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to connect, feel free to reach out through the links below:</p>
+    <a href="mailto:gaurav@example.com">Email Me</a>
+    <div class="social-links">
+        <a href="https://github.com" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+    </div>
 </section>
 
 <!-- Footer -->
 <footer>
-    <p>"Dream big, work hard, and never stop learning."</p>
-    <p>- Gaurav Kushwaha</p>
+    <p>Gaurav Kushwaha </p>
+    <p>Thankyou for visiting my site</p>
 </footer>
 
 </body>
